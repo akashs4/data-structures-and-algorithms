@@ -11,12 +11,3 @@ public class Basic_7_CountNonLeafNodesInTree {
     return val + countNonLeafNodes(root.left) + countNonLeafNodes(root.right);
   }
 }
-
-/*
-left        right
-null        not null
-not null    null
-not null    not null
-
-
-* */

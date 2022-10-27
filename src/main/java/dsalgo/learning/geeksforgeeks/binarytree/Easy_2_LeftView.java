@@ -10,9 +10,7 @@ public class Easy_2_LeftView {
 
   public ArrayList<Integer> leftView(Node root) {
     ArrayList<Integer> result = new ArrayList<>();
-
     helper(root, 1, result);
-
     return result;
   }
 
