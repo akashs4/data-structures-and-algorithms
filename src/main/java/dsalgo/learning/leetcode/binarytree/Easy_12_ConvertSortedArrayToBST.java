@@ -7,8 +7,7 @@ public class Easy_12_ConvertSortedArrayToBST {
         if(n==0)
             return null;
 
-        TreeNode root = helper(nums, 0, n-1);
-        return root;
+        return helper(nums, 0, n-1);
     }
 
     private TreeNode helper(int[] nums, int start, int end){
