@@ -1,7 +1,7 @@
 package dsalgo.learning.clrs.ch02;
 
 public class InsertionSort {
-    public void sort(int[] arr){
+    public static void sort(int[] arr){
         for(int i=1 ; i < arr.length ; i++){
             int key = arr[i];
             int j = i-1;
