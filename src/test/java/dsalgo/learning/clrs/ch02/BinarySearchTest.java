@@ -2,7 +2,6 @@ package dsalgo.learning.clrs.ch02;
 
 import dsalgo.learning.clrs.ch02.exercises.IterativeBinarySearch;
 import dsalgo.learning.clrs.ch02.exercises.RecursiveBinarySearch;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -112,7 +111,7 @@ public class BinarySearchTest {
                 item = random.nextInt(10000);
             }
 
-            int searchResult = RecursiveBinarySearch.search(arr, item, 0, arr.length - 1);
+            int searchResult = IterativeBinarySearch.search(arr, item);
             assertEquals(-1, searchResult);
         }
     }

@@ -44,7 +44,6 @@ public class TwoSumExistsTest {
             int x = getX(arr, random);
             Assertions.assertFalse(TwoSumExists.check(arr, x));
         }
-        ;
     }
 
     private static int getX(int[] arr, Random random) {
