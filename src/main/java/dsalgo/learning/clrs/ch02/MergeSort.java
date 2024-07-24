@@ -2,6 +2,9 @@ package dsalgo.learning.clrs.ch02;
 
 public class MergeSort {
 
+    private MergeSort() {
+    }
+
     /**
      * arr - input array to be sorted
      * start - start index
@@ -23,13 +26,12 @@ public class MergeSort {
         int[] leftArr = new int[leftSize];
         int[] rightArr = new int[rightSize];
 
-        for (int i = 0; i < leftSize; i++)
-            leftArr[i] = arr[start + i];
+        System.arraycopy(arr, start, leftArr, 0, leftSize);
+        System.arraycopy(arr, mid + 1, rightArr, 0, rightSize);
 
-        for (int i = 0; i < rightSize; i++)
-            rightArr[i] = arr[mid + 1 + i];
-
-        int i = 0, j = 0, k = start;
+        int i = 0;
+        int j = 0;
+        int k = start;
 
         while (i < leftSize && j < rightSize) {
             if (leftArr[i] <= rightArr[j])

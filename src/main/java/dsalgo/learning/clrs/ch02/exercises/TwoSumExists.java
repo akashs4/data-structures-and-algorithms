@@ -16,7 +16,9 @@ public class TwoSumExists {
         MergeSort.sort(arr, 0, n - 1); // Takes O(nlogn)
 
         boolean result = false;
-        for (int left = 0, right = n - 1; left < right; ) {
+        int left = 0;
+        int right = n - 1;
+        while (left < right) {
             if (arr[left] + arr[right] == x) {
                 result = true;
                 break;

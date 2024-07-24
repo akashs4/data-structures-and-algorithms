@@ -10,18 +10,19 @@ public class IterativeBinarySearch {
     /**
      * A - sorted array with unique elements
      */
-    public static int search(int[] A, int item) {
-        int start = 0, end = A.length - 1;
+    public static int search(int[] arr, int item) {
+        int start = 0;
+        int end = arr.length - 1;
         while (start <= end) {
             int mid = (start + end) / 2;
 
-            if (A[mid] == item)
+            if (arr[mid] == item)
                 return mid;
 
-            if (A[mid] > item)
+            if (arr[mid] > item)
                 end = mid - 1;
 
-            if (A[mid] < item)
+            if (arr[mid] < item)
                 start = mid + 1;
         }
         return -1;
