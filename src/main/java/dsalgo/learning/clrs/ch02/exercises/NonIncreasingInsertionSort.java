@@ -1,7 +1,12 @@
-package dsalgo.learning.clrs.ch02;
+package dsalgo.learning.clrs.ch02.exercises;
 
+// Exercise - 2.1
 public class NonIncreasingInsertionSort {
-    public void sort(int[] arr) {
+
+    private NonIncreasingInsertionSort() {
+    }
+
+    public static void sort(Integer[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int item = arr[i];
             int j = i - 1;

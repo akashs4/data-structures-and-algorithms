@@ -1,6 +1,9 @@
-package dsalgo.learning.clrs.ch02;
+package dsalgo.learning.clrs.ch02.exercises;
 
+// After ith iteration, starting i elements are sorted
 public class BubbleSort {
+    private BubbleSort() {}
+
     public static void sort(int[] arr) {
         int temp = 0;
         for (int i = 0; i < arr.length; i++) {
