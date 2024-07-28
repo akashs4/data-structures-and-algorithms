@@ -1,6 +1,7 @@
 package dsalgo.learning.clrs.ch04;
 
-public class MatrxiMultiplication {
+public class MatrixMultiplication {
+    private MatrixMultiplication(){}
     public static int[][] multiply(int[][] A, int[][] B) {
         int n = A.length;
         int[][] result = new int[n][n];

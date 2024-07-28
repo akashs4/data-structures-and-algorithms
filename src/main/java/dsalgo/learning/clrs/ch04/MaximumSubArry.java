@@ -1,6 +1,8 @@
 package dsalgo.learning.clrs.ch04;
 
 public class MaximumSubArry {
+    private MaximumSubArry() {
+    }
 
     public static int divideAndConquerMaxSubArray(int[] arr) {
         if (arr.length == 0)
