@@ -2,7 +2,7 @@ package dsalgo.learning.clrs.ch04;
 
 import org.junit.jupiter.api.Test;
 
-import static dsalgo.learning.clrs.ch04.MaximumSubArry.*;
+import static dsalgo.learning.clrs.ch04.MaximumSubArray.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MaximumSubArrayTest {

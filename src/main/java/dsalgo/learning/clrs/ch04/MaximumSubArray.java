@@ -1,7 +1,7 @@
 package dsalgo.learning.clrs.ch04;
 
-public class MaximumSubArry {
-    private MaximumSubArry() {
+public class MaximumSubArray {
+    private MaximumSubArray() {
     }
 
     public static int divideAndConquerMaxSubArray(int[] arr) {
@@ -59,23 +59,32 @@ public class MaximumSubArry {
         if (arr.length == 0)
             return 0;
         int max = arr[0], n = arr.length;
+//        for (int i = 0; i < n; i++) {
+//            int sum = 0, currentMax = arr[i];
+//
+//            for (int j = i; j < n; j++) {
+//                sum += arr[j];
+//
+//                if (sum > currentMax) {
+//                    currentMax = sum;
+//                }
+//
+//            }
+//
+//            if (currentMax > max) {
+//                max = currentMax;
+//            }
+//        }
+//        return max;
+
+        int sum = arr[0];
         for (int i = 0; i < n; i++) {
-            int sum = 0, currentMax = arr[i];
-
-            for (int j = i; j < n; j++) {
-                sum += arr[j];
-
-                if (sum > currentMax) {
-                    currentMax = sum;
-                }
-
-            }
-
-            if (currentMax > max) {
-                max = currentMax;
-            }
+            int currentSum = arr[i];
+            for (int j = i + 1; j < n; j++)
+                currentSum = Math.max(currentSum, currentSum + arr[j]);
+            sum = Math.max(currentSum, sum);
         }
-        return max;
+        return sum;
     }
 
     public static int linearTimeMaxSubArray(int[] arr) {
